@@ -34,7 +34,7 @@ def part1(values):
 
 if __name__ == "__main__":
     if len(sys.argv) != 2:
-        print("Need to pass 'python part1.py sessionId' (Arguments={}, Length={})".format(str(sys.argv), len(sys.argv)))
+        print("Need to pass 'python day1.py sessionId' (Arguments={}, Length={})".format(str(sys.argv), len(sys.argv)))
     else:  
         sessionId = sys.argv[1]  
         url = "https://adventofcode.com/2021/day/1/input"
