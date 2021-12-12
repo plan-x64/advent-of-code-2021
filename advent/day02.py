@@ -53,7 +53,7 @@ def print_value(result):
 
 if __name__ == "__main__":
     if len(sys.argv) != 2:
-        print("Need to pass 'python day2.py sessionId' (Arguments={}, Length={})".format(str(sys.argv), len(sys.argv)))
+        print("Need to pass 'python day02.py sessionId' (Arguments={}, Length={})".format(str(sys.argv), len(sys.argv)))
     else:  
         sessionId = sys.argv[1]  
         url = "https://adventofcode.com/2021/day/2/input"

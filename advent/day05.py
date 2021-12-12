@@ -43,6 +43,6 @@ def main():
     
 if __name__ == "__main__":
     if len(sys.argv) != 2:
-        print("Need to pass 'python day5.py sessionId' (Arguments={}, Length={})".format(str(sys.argv), len(sys.argv)))
+        print("Need to pass 'python day05.py sessionId' (Arguments={}, Length={})".format(str(sys.argv), len(sys.argv)))
     else:  
         main()
