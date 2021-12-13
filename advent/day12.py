@@ -1,5 +1,5 @@
 import adventutils
-from collections import (Counter, defaultdict, deque)
+from collections import (defaultdict, deque)
 import sys
 
 def parse_graph(input):
@@ -15,8 +15,9 @@ def part1_path_filter(possible_vertex, current_path):
     return possible_vertex.isupper() or possible_vertex not in current_path
 
 def part2_path_filter(possible_vertex, current_path):
-    max_small_visit_count = max(Counter([vertex for vertex in current_path if vertex.islower()]).values())
-    return part1_path_filter(possible_vertex, current_path) or (possible_vertex != 'start' and max_small_visit_count < 2)
+    lower = [vertex for vertex in current_path if vertex.islower()]
+    is_small_duplicate = len(lower) != len(set(lower))
+    return part1_path_filter(possible_vertex, current_path) or (possible_vertex != 'start' and not is_small_duplicate)
 
 def find_all_paths(graph, path_filter):
     paths = deque([['start']])
